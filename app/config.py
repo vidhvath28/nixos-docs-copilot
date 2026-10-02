@@ -3,6 +3,7 @@
 from functools import lru_cache
 from pathlib import Path
 
+from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -13,7 +14,9 @@ class Settings(BaseSettings):
 
     # LLM: "groq" (free tier) or "openai".
     llm_provider: str = "groq"
-    llm_model: str = "llama-3.3-70b-versatile"
+    llm_model: str = "openai/gpt-oss-120b"
+    groq_api_key: SecretStr | None = None
+    openai_api_key: SecretStr | None = None
     # Judge model used by the eval harness. Defaults to the answer model.
     judge_model: str | None = None
 

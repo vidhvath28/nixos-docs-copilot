@@ -15,11 +15,11 @@ def make_chat_model(model: str | None = None, temperature: float = 0.0) -> BaseC
     if s.llm_provider == "groq":
         from langchain_groq import ChatGroq
 
-        return ChatGroq(model=name, temperature=temperature)
+        return ChatGroq(model=name, temperature=temperature, api_key=s.groq_api_key, max_retries=4)
     if s.llm_provider == "openai":
         from langchain_openai import ChatOpenAI
 
-        return ChatOpenAI(model=name, temperature=temperature)
+        return ChatOpenAI(model=name, temperature=temperature, api_key=s.openai_api_key, max_retries=4)
     raise ValueError(f"unknown LLM_PROVIDER {s.llm_provider!r} (expected 'groq' or 'openai')")
 
 

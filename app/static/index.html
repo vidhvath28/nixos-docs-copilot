@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NixOS Docs Copilot</title>
+<style>
+  :root { --bg:#f7f8fa; --fg:#1b1f24; --muted:#5b6470; --card:#fff; --line:#dde1e6; --accent:#4b6fd1; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#111418; --fg:#e6e9ee; --muted:#9aa3ad; --card:#1a1e24; --line:#2c323a; --accent:#7f9cf0; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui, -apple-system, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 24px; }
+  form { display:flex; gap:8px; }
+  input { flex:1; min-width:0; padding:12px 14px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); font:inherit; }
+  button { padding:12px 18px; border:0; border-radius:8px; background:var(--accent); color:#fff; font:inherit; cursor:pointer; }
+  button:disabled { opacity:.6; cursor:wait; }
+  .examples { margin:12px 0 0; display:flex; flex-wrap:wrap; gap:6px; }
+  .examples button { background:var(--card); color:var(--fg); border:1px solid var(--line); padding:6px 10px; font-size:.85rem; }
+  .card { margin-top:24px; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; }
+  .answer { white-space:pre-wrap; overflow-wrap:anywhere; }
+  .answer code, pre { font:13px/1.45 ui-monospace, Menlo, monospace; }
+  h2 { font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 6px; }
+  ol { margin:0; padding-left:22px; }
+  a { color:var(--accent); }
+  .meta { color:var(--muted); font-size:.85rem; }
+  .err { color:#c0392b; }
+</style>
+</head>
+<body>
+<main>
+  <h1>NixOS Docs Copilot</h1>
+  <p class="sub">Ask about NixOS. Answers come only from the official NixOS manual, with a link to every section cited.</p>
+  <form id="f">
+    <input id="q" placeholder="How do I enable the OpenSSH server?" autocomplete="off" required minlength="3" maxlength="500">
+    <button id="go">Ask</button>
+  </form>
+  <div class="examples" id="ex"></div>
+  <div id="out"></div>
+</main>
+<script>
+const EXAMPLES = ["How do I enable the OpenSSH server?", "How do I set a static IPv4 address?",
+                  "How do I roll back to a previous configuration?", "How do I add a user account?"];
+const $ = (id) => document.getElementById(id);
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+for (const e of EXAMPLES) {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = e;
+  b.onclick = () => { $("q").value = e; ask(); };
+  $("ex").append(b);
+}
+$("f").onsubmit = (ev) => { ev.preventDefault(); ask(); };
+
+async function ask() {
+  const question = $("q").value.trim();
+  if (question.length < 3) return;
+  $("go").disabled = true;
+  $("out").innerHTML = '<div class="card meta">Searching the manual…</div>';
+  try {
+    const r = await fetch("/api/ask", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({question}) });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.detail || r.statusText);
+    const sources = data.sources.map((s) =>
+      `<li><a href="${esc(s.url || "#")}" target="_blank" rel="noopener">${esc(s.title || s.url)}</a></li>`).join("");
+    $("out").innerHTML = `<div class="card">
+      <div class="answer">${esc(data.answer)}</div>
+      ${sources ? `<h2>Sources</h2><ol>${sources}</ol>` : ""}
+      <h2>Agent steps</h2><div class="meta">${data.steps.map(esc).join(" → ")} · ${data.latency_ms} ms</div>
+    </div>`;
+  } catch (e) {
+    $("out").innerHTML = `<div class="card err">${esc(String(e.message || e))}</div>`;
+  } finally {
+    $("go").disabled = false;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,3 +1,15 @@
+---
+title: NixOS Docs Copilot
+emoji: ❄️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+short_description: Corrective-RAG assistant for the NixOS manual
+---
+
 # NixOS Docs Copilot
 
 A retrieval-augmented assistant for the [NixOS manual](https://nixos.org/manual/nixos/stable/).

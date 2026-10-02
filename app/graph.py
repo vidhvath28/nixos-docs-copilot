@@ -85,6 +85,10 @@ def format_passages(docs: list[Document]) -> str:
     return "\n\n".join(f"[{i}] ({d.metadata.get('title', '')})\n{d.page_content}" for i, d in enumerate(docs, 1))
 
 
+def is_not_found(answer: str) -> bool:
+    return answer.strip().strip('"') == NOT_FOUND
+
+
 def build_graph(
     llm: BaseChatModel,
     search: Search,
@@ -134,10 +138,19 @@ def build_graph(
         if not docs:
             return {"answer": NOT_FOUND, "sources": [], "steps": [*state["steps"], "generate: no context"]}
         msg = answerer.invoke({"question": state["question"], "passages": format_passages(docs)})
+        if is_not_found(msg.content):
+            # The grader passed these passages but they didn't hold the answer - nothing to cite.
+            return {"answer": NOT_FOUND, "sources": [], "steps": [*state["steps"], "generate: not in passages"]}
         sources = [
             {"n": i, "title": d.metadata.get("title"), "url": d.metadata.get("url")} for i, d in enumerate(docs, 1)
         ]
         return {"answer": msg.content, "sources": sources, "steps": [*state["steps"], "generate"]}
+
+    def route_after_generate(state: RagState) -> str:
+        # Passages that looked relevant but didn't answer the question get one more search, too.
+        if state["answer"] == NOT_FOUND and state["documents"] and state.get("rewrites", 0) < max_rewrites:
+            return "rewrite"
+        return END
 
     g = StateGraph(RagState)
     g.add_node("retrieve", retrieve)
@@ -151,7 +164,9 @@ def build_graph(
         g.add_edge("retrieve", "grade")
         g.add_conditional_edges("grade", route_after_grade, {"generate": "generate", "rewrite": "rewrite"})
         g.add_edge("rewrite", "retrieve")
-    g.add_edge("generate", END)
+        g.add_conditional_edges("generate", route_after_generate, {"rewrite": "rewrite", END: END})
+    if mode == "baseline":
+        g.add_edge("generate", END)
     return g.compile()
 
 

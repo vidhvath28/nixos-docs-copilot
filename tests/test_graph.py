@@ -74,3 +74,27 @@ def test_baseline_mode_skips_grading():
     llm = ScriptedLLM(responses=["answer [1]"], structured=[])
     out = build_graph(llm, lambda q, k: [doc("A")], mode="baseline").invoke({"question": "q?"})
     assert out["steps"] == ["retrieve: q?", "generate"]
+
+
+def test_not_found_answer_from_graded_passages_triggers_rewrite():
+    llm = ScriptedLLM(
+        responses=[NOT_FOUND, "Use networking.firewall.allowedTCPPorts = [ 80 443 ]; [1]"],
+        structured=[
+            Relevant(relevant=[1]),
+            Rewrite(query="networking.firewall.allowedTCPPorts"),
+            Relevant(relevant=[1]),
+        ],
+    )
+    results = {"open ports 80 443": [doc("Tdarr › Firewall")], "networking.firewall.allowedTCPPorts": [doc("Firewall")]}
+    out = build_graph(llm, lambda q, k: results[q]).invoke({"question": "open ports 80 443"})
+    assert [s.split(":")[0] for s in out["steps"]] == [
+        "retrieve",
+        "grade",
+        "generate",
+        "rewrite",
+        "retrieve",
+        "grade",
+        "generate",
+    ]
+    assert "allowedTCPPorts" in out["answer"]
+    assert [s["title"] for s in out["sources"]] == ["Firewall"]

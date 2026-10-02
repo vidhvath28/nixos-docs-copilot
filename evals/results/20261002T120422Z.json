@@ -1,0 +1,855 @@
+{
+  "meta": {
+    "timestamp": "20261002T120422Z",
+    "llm": "groq/openai/gpt-oss-120b",
+    "judge": "qwen/qwen3.8-27b",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "top_k": 6
+  },
+  "retrieval": {
+    "k": 6,
+    "hit_rate": 0.9473684210526315,
+    "n": 19,
+    "rows": [
+      {
+        "id": "ssh-enable",
+        "hit": true,
+        "retrieved": [
+          "sec-ssh",
+          "module-service-doh-server-quick-start",
+          "sec-sshfs-non-interactive",
+          "module-services-opencloud-basic-usage",
+          "module-services-tdarr-distributed-server",
+          "module-programs-zsh-ohmyzsh"
+        ]
+      },
+      {
+        "id": "ssh-root",
+        "hit": true,
+        "retrieved": [
+          "sec-ssh",
+          "sec-nixos-test-ssh-access",
+          "module-service-doh-server-quick-start",
+          "sec-test-container-ssh-access",
+          "sec-changing-config",
+          "sec-sshfs-non-interactive"
+        ]
+      },
+      {
+        "id": "ssh-keys",
+        "hit": true,
+        "retrieved": [
+          "sec-ssh",
+          "sec-sshfs-non-interactive",
+          "sec-user-management",
+          "module-services-keycloak-admin",
+          "sec-nixos-test-ssh-access",
+          "sec-wireless-declarative"
+        ]
+      },
+      {
+        "id": "static-ip",
+        "hit": true,
+        "retrieved": [
+          "sec-ipv6",
+          "sec-ipv4",
+          "sec-container-networking",
+          "module-services-networking-pihole-ftl-configuration",
+          "module-service-doh-server-quick-start",
+          "module-services-crab-hole-configuration"
+        ]
+      },
+      {
+        "id": "firewall-port",
+        "hit": false,
+        "retrieved": [
+          "module-services-tdarr-networking-ports",
+          "module-services-tdarr-networking-firewall",
+          "module-service-doh-server-quick-start",
+          "module-services-tdarr-distributed-server",
+          "module-services-suwayomi-server-basic-usage",
+          "module-services-amule"
+        ]
+      },
+      {
+        "id": "firewall-disable",
+        "hit": true,
+        "retrieved": [
+          "sec-firewall",
+          "module-services-tdarr-networking-firewall",
+          "module-service-umurmur-quick-start",
+          "module-service-doh-server-quick-start",
+          "sec-declarative-containers",
+          "sec-rebooting"
+        ]
+      },
+      {
+        "id": "firewall-range",
+        "hit": true,
+        "retrieved": [
+          "sec-firewall",
+          "module-services-tdarr-networking-ports",
+          "module-services-tdarr-networking-firewall",
+          "module-service-doh-server-quick-start",
+          "module-services-crab-hole-configuration",
+          "sec-nixos-test-port-forwarding"
+        ]
+      },
+      {
+        "id": "rollback",
+        "hit": true,
+        "retrieved": [
+          "sec-rollback",
+          "sec-nix-store-corruption",
+          "sect-nixos-gc-boot-entries",
+          "sec-changing-config",
+          "sec-getting-sources",
+          "sec-installing-from-other-distro"
+        ]
+      },
+      {
+        "id": "apply-config",
+        "hit": true,
+        "retrieved": [
+          "sec-changing-config",
+          "sec-contributing-options",
+          "sec-installing-from-other-distro",
+          "sec-installing-from-other-distro",
+          "sec-imperative-containers",
+          "sec-changing-config"
+        ]
+      },
+      {
+        "id": "test-config",
+        "hit": true,
+        "retrieved": [
+          "sec-changing-config",
+          "sec-changing-config",
+          "sec-rollback",
+          "sec-installation-manual-installing",
+          "sec-installation-manual-installing",
+          "sec-changing-config"
+        ]
+      },
+      {
+        "id": "add-user",
+        "hit": true,
+        "retrieved": [
+          "modules-services-gotosocial-user-management",
+          "sec-user-management",
+          "sec-user-management",
+          "sec-installing-from-other-distro",
+          "sec-systemd-sysusers",
+          "module-services-pleroma-admin-user"
+        ]
+      },
+      {
+        "id": "install-pkg",
+        "hit": true,
+        "retrieved": [
+          "sec-declarative-package-mgmt",
+          "sec-declarative-package-mgmt",
+          "sec-ad-hoc-packages",
+          "module-services-emacs-adding-packages",
+          "module-services-emacs-adding-packages",
+          "sec-configuration-file"
+        ]
+      },
+      {
+        "id": "nix-env",
+        "hit": true,
+        "retrieved": [
+          "sec-ad-hoc-packages",
+          "module-services-emacs-adding-packages",
+          "sec-custom-packages-nix",
+          "module-services-emacs-adding-packages",
+          "module-services-emacs-configuring",
+          "sec-package-management"
+        ]
+      },
+      {
+        "id": "auto-upgrade",
+        "hit": true,
+        "retrieved": [
+          "sec-upgrading-automatic",
+          "sec-upgrading",
+          "sec-ad-hoc-packages",
+          "sec-upgrading",
+          "sec-changing-config",
+          "sec-writing-modules"
+        ]
+      },
+      {
+        "id": "channels",
+        "hit": true,
+        "retrieved": [
+          "sec-upgrading",
+          "sec-upgrading",
+          "sec-upgrading",
+          "sec-upgrading",
+          "sec-building-image-instructions",
+          "sec-installing-from-other-distro"
+        ]
+      },
+      {
+        "id": "disk-space",
+        "hit": true,
+        "retrieved": [
+          "sec-nix-gc",
+          "sec-nix-gc",
+          "module-services-gitlab-runner",
+          "sect-nixos-gc-boot-entries",
+          "sec-nix-store-corruption",
+          "sec-installation-graphical"
+        ]
+      },
+      {
+        "id": "gc-schedule",
+        "hit": true,
+        "retrieved": [
+          "sec-nix-gc",
+          "module-services-gitlab-runner",
+          "sect-nixos-systemd-nixos",
+          "sec-rebooting",
+          "module-services-matomo-archive-processing",
+          "ssec-machine-objects"
+        ]
+      },
+      {
+        "id": "wifi",
+        "hit": true,
+        "retrieved": [
+          "sec-wireless",
+          "sec-networkmanager",
+          "sec-installation-manual-networking",
+          "sec-networkmanager",
+          "sec-installation-manual-installing",
+          "sec-wireless-imperative"
+        ]
+      },
+      {
+        "id": "x11",
+        "hit": true,
+        "retrieved": [
+          "sec-gnome-enable",
+          "sec-gnome-core-developer-tools",
+          "chap-gnome",
+          "sec-gnome-games",
+          "sec-gnome-without-the-apps",
+          "sec-gnome-gsettings-overrides-example"
+        ]
+      }
+    ]
+  },
+  "full": {
+    "baseline": {
+      "correctness_avg": 4.74,
+      "correct_rate": 0.947,
+      "faithful_rate": 0.737,
+      "cited_hit_rate": 0.947,
+      "refusal_rate": 1.0,
+      "p50_ms": 1179,
+      "rows": [
+        {
+          "id": "ssh-enable",
+          "ms": 1286,
+          "steps": [
+            "retrieve: How do I enable the OpenSSH server?",
+            "generate"
+          ],
+          "answer": "To start an OpenSSH server on NixOS, enable the `openssh` service in your system configuration:\n\n```nix\n{\n  services.openssh.enable = true;\n}\n```\n\nAdd the above line (or merge it into your existing `configuration.nix`). After rebuilding (`sudo nixos-rebuild switch`), the SSH daemon will be started and listening for connections.  \n\n*By default, password\u2011based root logins are disabled; you can adjust this with `services.openssh.settings.PermitRootLogin` if needed.*  \n\nSource:\u202f[1]\u200b",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The core answer (services.openssh.enable = true) matches the reference, but the claim that \"sudo nixos-rebuild switch\" is required to start the daemon is not supported by the provided passages."
+        },
+        {
+          "id": "ssh-root",
+          "ms": 1015,
+          "steps": [
+            "retrieve: How do I completely disable root login over SSH?",
+            "generate"
+          ],
+          "answer": "To forbid any root login via SSH, set the OpenSSH option **PermitRootLogin** to `\"no\"` in your NixOS configuration:\n\n```nix\n{\n  services.openssh.enable = true;\n  services.openssh.settings.PermitRootLogin = \"no\";\n}\n```\n\nThis disables root logins completely.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly states setting services.openssh.settings.PermitRootLogin to \"no\" to disable root logins entirely, matching the reference and passage [1]; all claims are supported."
+        },
+        {
+          "id": "ssh-keys",
+          "ms": 1131,
+          "steps": [
+            "retrieve: How can I declare a user's authorized SSH public keys?",
+            "generate"
+          ],
+          "answer": "You can declare a user\u2019s authorized SSH public keys in the NixOS configuration by adding them under the user\u2019s\u202f`openssh.authorizedKeys` attribute. For example:\n\n```nix\n{\n  # Enable the SSH daemon\n  services.openssh.enable = true;\n\n  # Declare the user and his authorized key(s)\n  users.users.alice.openssh.authorizedKeys.keys = [\n    \"ssh-ed25519 AAAAB3NzaC1kc3MAAACBAPIkGWVEt4...\"\n  ];\n}\n```\n\nThis snippet declaratively sets the public key that\u202f`alice` may use for SSH logins\u202f[1].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer gives the exact option users.users.<name>.openssh.authorizedKeys.keys with a matching example, and all claims (including enabling services.openssh) are supported by passage [1]."
+        },
+        {
+          "id": "static-ip",
+          "ms": 1300,
+          "steps": [
+            "retrieve: How do I give eth0 a static IPv4 address?",
+            "generate"
+          ],
+          "answer": "To assign a fixed IPv4 address to **eth0** you configure the interface manually in `configuration.nix`:\n\n```nix\n{\n  networking.interfaces.eth0.ipv4.addresses = [\n    {\n      address = \"192.168.1.2\";   # the static address you want\n      prefixLength = 24;        # netmask /24 (255.255.255.0)\n    }\n  ];\n\n  # (optional) set the default gateway and DNS servers\n  networking.defaultGateway = \"192.168.1.1\";\n  networking.nameservers = [ \"8.8.8.8\" ];\n}\n```\n\nThis snippet follows the example given in the NixOS manual for IPv4 static configuration\u202f[2]. After adding it, rebuild the system (`sudo nixos-rebuild switch`) and the interface `eth0` will use the specified static IPv4 address.",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The answer matches the reference (correct option names, example values, and the DHCP/dhcpcd default), but it claims you must run `sudo nixos-rebuild switch` to apply the change, which is not stated in the provided passages (they only mention systemd services and `systemctl restart networking-scripted.target`), making it unfaithful."
+        },
+        {
+          "id": "firewall-port",
+          "ms": 1154,
+          "steps": [
+            "retrieve: I'm running a web server, how do I open ports 80 and 443?",
+            "generate: not in passages"
+          ],
+          "answer": "I couldn't find this in the NixOS manual.",
+          "cited_hit": false,
+          "correctness": 1,
+          "faithful": true,
+          "reason": "refused an answerable question"
+        },
+        {
+          "id": "firewall-disable",
+          "ms": 929,
+          "steps": [
+            "retrieve: How do I turn off the firewall?",
+            "generate"
+          ],
+          "answer": "To disable the NixOS firewall, set its enable option to\u202f`false` in your configuration:\n\n```nix\n{\n  networking.firewall.enable = false;\n}\n```\n\nAfter adding this to your `configuration.nix`, rebuild the system (e.g., `nixos-rebuild switch`).  \n\n[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly gives networking.firewall.enable = false, matching the reference and passage [1]; the nixos-rebuild switch suggestion is supported by passage [5]."
+        },
+        {
+          "id": "firewall-range",
+          "ms": 1145,
+          "steps": [
+            "retrieve: How do I open a range of TCP ports like 4000 to 4007?",
+            "generate"
+          ],
+          "answer": "To open a range of TCP ports you use the firewall option **`networking.firewall.allowedTCPPortRanges`** and specify the start (`from`) and end (`to`) of each range:\n\n```nix\n{\n  networking.firewall.allowedTCPPortRanges = [\n    {\n      from = 4000;\n      to   = 4007;\n    }\n  ];\n}\n```\n\nThis will open ports\u202f4000 through\u202f4007 for incoming TCP traffic.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly uses networking.firewall.allowedTCPPortRanges with from=4000 and to=4007, matching the reference and passage [1]."
+        },
+        {
+          "id": "rollback",
+          "ms": 1315,
+          "steps": [
+            "retrieve: My last nixos-rebuild broke things. How do I undo it?",
+            "generate"
+          ],
+          "answer": "If the most recent `nixos-rebuild` left your system unusable you can roll back to the previous configuration.\n\n**From the running system**\n\n```bash\n# nixos-rebuild switch --rollback\n```\n\nThis switches the live system to the configuration that was active before the last rebuild. It is equivalent to running the `switch-to-configuration` script directly\u202f[1].\n\n**If the system no longer boots**\n\n1. At the GRUB menu choose **\u201cNixOS \u2013 All configurations\u201d** and select a previous entry that has not been garbage\u2011collected.  \n2. After the system boots, make that configuration the default for future boots:\n\n```bash\n# /run/current-system/bin/switch-to-configuration boot\n```\n\nBoth methods are described in the \u201cRolling Back Configuration Changes\u201d section of the manual\u202f[1].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer matches the reference exactly: it gives `nixos-rebuild switch --rollback` for the running system and the GRUB \"NixOS - All configurations\" submenu plus `/run/current-system/bin/switch-to-configuration boot` to set the default, all of which are supported by passage [1]."
+        },
+        {
+          "id": "apply-config",
+          "ms": 1101,
+          "steps": [
+            "retrieve: I edited /etc/nixos/configuration.nix. How do I apply the change?",
+            "generate"
+          ],
+          "answer": "Edit the file **/etc/nixos/configuration.nix** and then rebuild the system with the NixOS rebuild command.  \nRun it as root (or with\u202f`sudo`):\n\n```bash\n# nixos-rebuild switch\n```\n\n`nixos-rebuild switch`  \n\n* builds the new configuration,  \n* makes it the default for the next boot, and  \n* applies it to the running system (re\u2011starting the affected services)\u30101\u3011.\n\nIf you only want to test the new configuration without changing the boot default, you can use:\n\n```bash\n# nixos-rebuild test\n```\n\nor, to make it the boot default but not switch the running system immediately:\n\n```bash\n# nixos-rebuild boot\n```\u30101\u3011.",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly states to run `nixos-rebuild switch` as root, which builds the new configuration, makes it the boot default, and activates it in the running system, matching the reference and passage [1]; the additional `test` and `boot` variants are also accurately described per passages [1] and [6]."
+        },
+        {
+          "id": "test-config",
+          "ms": 1163,
+          "steps": [
+            "retrieve: How can I try a new configuration without making it the boot default?",
+            "generate"
+          ],
+          "answer": "You can build the new configuration and switch the running system to it **without** making it the default for the next boot by using the **`test`** command of `nixos-rebuild`:\n\n```bash\n# nixos-rebuild test\n```\n\nThis builds the configuration and applies it to the current session, but leaves the boot\u2011loader entry unchanged, so a reboot will return to the previously\u2011default configuration if the test one causes problems.\u202f[2]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly identifies nixos-rebuild test as the command to try a new configuration without making it the boot default, matching the reference and supported by passage [2]."
+        },
+        {
+          "id": "add-user",
+          "ms": 2301,
+          "steps": [
+            "retrieve: How do I create a normal user account who can use sudo?",
+            "generate"
+          ],
+          "answer": "To create a regular (non\u2011root) account that can run commands with **sudo**, you need to:\n\n1. **Create the user** \u2013 either declaratively in `configuration.nix` or imperatively with `useradd`.  \n2. **Add the user to the `wheel` group** \u2013 members of this group are allowed to use sudo.  \n\n**Declarative (recommended) way**\n\nAdd a user definition to `configuration.nix` under `users.users`.  \nGive the user the `wheel` group (and any other groups you need, e.g. `networkmanager`).  \n\n```nix\n# /etc/nixos/configuration.nix\n{\n  users.users.alice = {\n    isNormalUser = true;          # normal (non\u2011root) user\n    extraGroups = [ \"wheel\" \"networkmanager\" ];  # wheel \u2192 sudo access\n    # optional: set a password later with `passwd alice`\n  };\n}\n```\n\n* The passage notes that \u201calice is a member of the wheel \u2026 groups, which allows her to use sudo to execute commands as root\u201d\u30102\u3011.  \n\nAfter editing the file, apply the change:\n\n```sh\nsudo nixos-rebuild switch\n```\n\n**Imperative way (for a temporary or quick test)**\n\nYou can also create the account with the classic `useradd` command and then add it to `wheel`:\n\n```sh\n# useradd -m alice               # creates a home directory (\u2011m)\u30103\u3011\n# usermod -aG wheel alice        # adds alice to the wheel group\n# passwd alice                   # set a password so she can log in\u30103\u3011\n```\n\nThe `useradd` example is shown in the manual\u30103\u3011, and membership in `wheel` grants sudo rights as described in the user\u2011management section\u30102\u3011.  \n\nEither method gives you a normal user who can invoke `sudo` for privileged commands.",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The answer correctly gives users.users.<name> with isNormalUser = true and extraGroups = [ \"wheel\" ] and notes wheel grants sudo, matching the reference, but it claims the imperative useradd/usermod method works, which the passages say is no longer available when users.mutableUsers is false, so that claim is not supported by the passages."
+        },
+        {
+          "id": "install-pkg",
+          "ms": 2602,
+          "steps": [
+            "retrieve: How do I install a package like Thunderbird system-wide declaratively?",
+            "generate"
+          ],
+          "answer": "To install Thunderbird (or any other package) for all users via declarative configuration, add it to the **environment.systemPackages** list in your `configuration.nix` and then rebuild the system.\n\n```nix\n# /etc/nixos/configuration.nix\n{\n  environment.systemPackages = [\n    pkgs.thunderbird   # \u2190 Thunderbird will be built or fetched\n  ];\n}\n```\n\nAfter saving the file, apply the change:\n\n```bash\n$ sudo nixos-rebuild switch\n```\n\nThe package will be built or downloaded as part of the system generation and become available to every user.  \n*(Note: some packages may need additional global configuration such as D\u2011Bus or systemd services; check whether a dedicated NixOS module exists.)*  \n\n**Sources**: [1] provides the exact snippet and explanation; [6] shows the general syntax for adding packages to `environment.systemPackages`.",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly specifies adding pkgs.thunderbird to environment.systemPackages and running nixos-rebuild switch, matching the reference and supported by passages [1] and [6]."
+        },
+        {
+          "id": "nix-env",
+          "ms": 1767,
+          "steps": [
+            "retrieve: How do I install a package from the command line without editing my configuration?",
+            "generate"
+          ],
+          "answer": "You can install a package ad\u2011hoc from the command line with **nix\u2011env** \u2013 no change to *configuration.nix* is needed.  \n\n```bash\n# Install a package by its attribute name (e.g. Thunderbird)\nnix-env -iA nixos.thunderbird\n```\n\n* `-iA` tells `nix-env` to install the package identified by its attribute name in the NixOS channel.  \n* If you run the command as a normal user, the package is placed in your personal profile  \n  `/nix/var/nix/profiles/per-user/<your\u2011user>/profile` and is visible only to you.  \n* If you run it as **root**, the package is installed in the system\u2011wide profile  \n  `/nix/var/nix/profiles/default` and becomes available to all users.\n\nThis \u201cad\u2011hoc\u201d style of package management is described in the manual as the way to install, upgrade, or uninstall packages via `nix-env` without editing the system configuration\u202f[1][6].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly identifies nix-env -iA nixos.thunderbird, explains the -A flag, and accurately states the root vs user profile paths and visibility, all of which are supported by the passages."
+        },
+        {
+          "id": "auto-upgrade",
+          "ms": 1165,
+          "steps": [
+            "retrieve: Can NixOS update itself automatically?",
+            "generate"
+          ],
+          "answer": "Yes. NixOS can keep itself up\u2011to\u2011date automatically by enabling the built\u2011in auto\u2011upgrade service. Add the following options to **/etc/nixos/configuration.nix**:\n\n```nix\n{\n  system.autoUpgrade.enable = true;      # turn on the periodic upgrade service\n  system.autoUpgrade.allowReboot = true; # (optional) reboot automatically when a new kernel or initrd is installed\n  # You can also pin a specific channel, e.g.\n  # system.autoUpgrade.channel = \"https://channels.nixos.org/nixos-26.05\";\n}\n```\n\nThis creates the `nixos-upgrade.service` timer, which periodically runs `nixos-rebuild switch --upgrade` (or reboots automatically if `allowReboot` is true) to upgrade the system to the latest version in the configured channel\u202f[1].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The answer matches the reference on all key facts (system.autoUpgrade.enable, allowReboot, nixos-upgrade.service, nixos-rebuild switch --upgrade), but it claims the service is a \"timer,\" which is not stated in the passages (they only mention systemctl list-timers to view when it runs), making it unfaithful."
+        },
+        {
+          "id": "channels",
+          "ms": 1278,
+          "steps": [
+            "retrieve: What is the difference between the stable and unstable NixOS channels?",
+            "generate"
+          ],
+          "answer": "The stable NixOS channels (e.g.\u202f`nixos-26.05`) only receive **conservative bug\u2011fixes and modest package upgrades**.  A channel update might bump a component such as the Linux kernel from one patch level to the next (e.g.\u202f4.19.34 \u2192\u202f4.19.38) but it will not introduce a new major version that could break things.  Stable channels are kept around until the next stable branch is released\u202f[2].\n\nThe unstable channel (`nixos-unstable`) tracks **NixOS\u2019s main development branch**.  Updates can contain **radical changes** between channel revisions, and because it reflects ongoing development it is **not recommended for production systems**\u202f[2].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer accurately reflects the reference and passage [2]: stable channels get conservative bug fixes/package upgrades (e.g., kernel 4.19.34\u21924.19.38, not 4.19.x\u21924.20.x) and are maintained until the next stable branch, while nixos-unstable tracks the main development branch, may see radical changes, and is not recommended for production."
+        },
+        {
+          "id": "disk-space",
+          "ms": 1845,
+          "steps": [
+            "retrieve: The Nix store is eating my disk. How do I free up space?",
+            "generate"
+          ],
+          "answer": "The Nix store can be trimmed with the normal cleaning commands that the manual describes.\n\n1. **Run the garbage collector** \u2013 this removes any store paths that are no longer referenced by any GC root (profiles, system generations, etc.).  \n\n   ```bash\n   $ nix-collect-garbage\n   ```  \n\n   [2]\n\n2. **Delete old roots if you also want to drop the ability to roll back** \u2013 the `\u2011d` flag removes old system generations and other roots.  \n\n   ```bash\n   $ nix-collect-garbage -d\n   ```  \n\n   [2]\n\n3. **Delete old generations of a specific user profile** (optional, if you keep many generations).  \n\n   ```bash\n   $ nix-env -p /nix/var/nix/profiles/per-user/eelco/profile --delete-generations old\n   ```  \n\n   [1][2]\n\n4. **Run the store optimiser** \u2013 it deduplicates identical files in the store by turning them into hard\u2011links, often reclaiming up to ~40\u202f% of the store size.  \n\n   ```bash\n   $ nix-store --optimise\n   ```  \n\n   [1]\n\n5. **Automate regular garbage collection** \u2013 add the following to `configuration.nix` so that the systemd unit `nix-gc.service` runs nightly (e.g., at 03:15).  \n\n   ```nix\n   {\n     nix.gc.automatic = true;\n     nix.gc.dates = \"03:15\";\n   }\n   ```  \n\n   [2]\n\n6. **If the `/boot` partition is also full**, after clearing old profiles you must rebuild the system so that the boot entries are updated and space is freed there.  \n\n   ```bash\n   $ nixos-rebuild boot   # or nixos-rebuild switch\n   ```  \n\n   [4]\n\nFollowing these steps will free up space in the Nix store (and, if needed, in `/boot`).",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer covers all key points from the reference (nix-collect-garbage, -d flag, nix-store --optimise, nix.gc.automatic) and every additional claim (profile generation deletion, 40% optimisation, /boot rebuild) is directly supported by the provided passages."
+        },
+        {
+          "id": "gc-schedule",
+          "ms": 1194,
+          "steps": [
+            "retrieve: How do I make garbage collection run every night?",
+            "generate"
+          ],
+          "answer": "Add a garbage\u2011collection timer in your `configuration.nix` by enabling the automatic GC unit and specifying the time you want it to run, e.g.:\n\n```nix\n{\n  nix.gc.automatic = true;\n  nix.gc.dates = \"03:15\";\n}\n```\n\nWhen you rebuild the system, NixOS will create the `nix-gc.service` timer that runs `nix-collect-garbage` each night at the given time.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The answer gives the correct options (nix.gc.automatic = true; nix.gc.dates = \"03:15;\") matching the reference, but it claims NixOS creates a \"nix-gc.service timer\" that \"runs nix-collect-garbage,\" which is not stated in the passages (they only mention the nix-gc.service unit and running it automatically at set times), making it unfaithful."
+        },
+        {
+          "id": "wifi",
+          "ms": 1650,
+          "steps": [
+            "retrieve: How do I set up wifi without NetworkManager?",
+            "generate"
+          ],
+          "answer": "To use Wi\u2011Fi without NetworkManager you let **wpa_supplicant** manage the wireless interface directly.\n\n1. **Enable the wireless subsystem**  \n\n   ```nix\n   {\n     networking.wireless.enable = true;\n   }\n   ```\n\n   This turns on wpa_supplicant, which will automatically take control of the first wireless device that appears\u202f[1].\n\n2. **(Optional) Pin the interface name** \u2013 it is more reliable to tell NixOS which interface(s) should be handled:\n\n   ```nix\n   {\n     networking.wireless.interfaces = [ \"wlan0\" ];   # or any other name\n   }\n   ```\n\n   With this setting NixOS creates a dedicated systemd service such as `wpa_supplicant-wlan0.service`\u202f[1].\n\n3. **Add/modify networks**  \n\n   *If you want to add a network without rebuilding the whole system*, enable user\u2011controlled (imperative) configuration:\n\n   ```nix\n   {\n     networking.wireless.userControlled = true;\n   }\n   ```\n\n   Then, as a member of the `wpa_supplicant` group, you can use `wpa_cli`:\n\n   ```sh\n   # wpa_cli\n   > add_network\n   > set_network 0 ssid \"my-ssid\"\n   > set_network 0 psk \"my-secret\"\n   > select_network 0\n   ```\n\n   (These changes are temporary unless you also set `networking.wireless.allowAuxiliaryImperativeNetworks` to make them persistent)\u202f[6].\n\nThat\u2019s all you need \u2013 no NetworkManager is involved. All required options are covered in the passages above\u202f[1][6].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly identifies wpa_supplicant with networking.wireless.enable = true and recommends setting networking.wireless.interfaces, matching the reference, and all additional details (systemd service names, userControlled, wpa_cli, allowAuxiliaryImperativeNetworks) are supported by the passages."
+        },
+        {
+          "id": "x11",
+          "ms": 919,
+          "steps": [
+            "retrieve: How do I enable a graphical desktop like GNOME?",
+            "generate"
+          ],
+          "answer": "To enable the GNOME graphical desktop on NixOS, add the following to your `configuration.nix`:\n\n```nix\n{\n  services.desktopManager.gnome.enable = true;\n  services.displayManager.gdm.enable = true;\n}\n```\n\nThis activates the GNOME desktop environment and the GDM display manager (recommended for full GNOME functionality)\u30101\u3011.",
+          "cited_hit": true,
+          "correctness": 4,
+          "faithful": true,
+          "reason": "The answer correctly gives services.desktopManager.gnome.enable = true and adds the recommended GDM display manager, both supported by the passages, but it omits the reference's explicit services.xserver.enable = true option."
+        },
+        {
+          "id": "oos-windows",
+          "ms": 832,
+          "steps": [
+            "retrieve: How do I activate a Windows 11 license key?",
+            "generate: not in passages"
+          ],
+          "answer": "I couldn't find this in the NixOS manual.",
+          "refused": true
+        },
+        {
+          "id": "oos-football",
+          "ms": 1388,
+          "steps": [
+            "retrieve: Who won the 2018 FIFA World Cup?",
+            "generate: not in passages"
+          ],
+          "answer": "I couldn't find this in the NixOS manual.",
+          "refused": true
+        },
+        {
+          "id": "oos-macos",
+          "ms": 1086,
+          "steps": [
+            "retrieve: How do I change the Dock size on macOS?",
+            "generate: not in passages"
+          ],
+          "answer": "I couldn't find this in the NixOS manual.",
+          "refused": true
+        }
+      ]
+    },
+    "agent": {
+      "correctness_avg": 4.95,
+      "correct_rate": 1.0,
+      "faithful_rate": 0.842,
+      "cited_hit_rate": 1.0,
+      "refusal_rate": 1.0,
+      "p50_ms": 2182,
+      "rows": [
+        {
+          "id": "ssh-enable",
+          "ms": 1604,
+          "steps": [
+            "retrieve: How do I enable the OpenSSH server?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "To enable the OpenSSH server, add the following setting to your NixOS configuration:\n\n```nix\n{\n  services.openssh.enable = true;\n}\n```\n\nThis activates the SSH daemon on the system.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly states services.openssh.enable = true, matching the reference and supported by passage [1]."
+        },
+        {
+          "id": "ssh-root",
+          "ms": 2004,
+          "steps": [
+            "retrieve: How do I completely disable root login over SSH?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "To disable root logins over SSH you set the OpenSSH option\u202f`PermitRootLogin` to `\"no\"` in your NixOS configuration:\n\n```nix\n{\n  services.openssh.enable = true;\n  services.openssh.settings.PermitRootLogin = \"no\";\n}\n```\n\nThis disables all root logins, not just password\u2011based ones.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly identifies setting services.openssh.settings.PermitRootLogin to \"no\" to disable root logins entirely, matching the reference and supported by passage [1]."
+        },
+        {
+          "id": "ssh-keys",
+          "ms": 2164,
+          "steps": [
+            "retrieve: How can I declare a user's authorized SSH public keys?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "You can declare a user\u2019s authorized SSH public keys in the NixOS configuration like this:\n\n```nix\n{\n  # Enable the SSH service\n  services.openssh.enable = true;\n\n  # Declare the keys for a specific user (e.g., alice)\n  users.users.alice.openssh.authorizedKeys.keys = [\n    \"ssh-ed25519 AAAAB3NzaC1kc3MAAACBAPIkGWVEt4...\"\n  ];\n}\n```\n\nThe `users.users.<name>.openssh.authorizedKeys.keys` attribute takes a list of public\u2011key strings, which will be installed as the user\u2019s `~/.ssh/authorized_keys` file.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The answer correctly gives the option users.users.<name>.openssh.authorizedKeys.keys and the services.openssh.enable = true, both supported by the passage, but the claim that the keys are installed as the user's ~/.ssh/authorized_keys file is not stated in the passage, making it unfaithful."
+        },
+        {
+          "id": "static-ip",
+          "ms": 2201,
+          "steps": [
+            "retrieve: How do I give eth0 a static IPv4 address?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "To assign a static IPv4 address to **eth0**, add a static address definition (and optionally a gateway and DNS servers) to your NixOS configuration:\n\n```nix\n{\n  networking.interfaces.eth0.ipv4.addresses = [\n    {\n      address = \"192.168.1.2\";\n      prefixLength = 24;\n    }\n  ];\n\n  networking.defaultGateway = \"192.168.1.1\";\n  networking.nameservers = [ \"8.8.8.8\" ];\n}\n```\n\nThis disables DHCP for *eth0* and configures the interface with the specified address, netmask (via `prefixLength`), default gateway, and DNS servers. After editing `configuration.nix`, rebuild the system (`sudo nixos-rebuild switch`).  \n\n[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The answer matches the reference's option names and key facts, but it claims \"This disables DHCP for eth0\" and recommends \"sudo nixos-rebuild switch,\" neither of which is stated in the provided passage."
+        },
+        {
+          "id": "firewall-port",
+          "ms": 5514,
+          "steps": [
+            "retrieve: I'm running a web server, how do I open ports 80 and 443?",
+            "grade: kept 1/6",
+            "generate: not in passages",
+            "rewrite: networking.firewall.allowedTCPPorts 80 443",
+            "retrieve: networking.firewall.allowedTCPPorts 80 443",
+            "grade: kept 2/6",
+            "generate"
+          ],
+          "answer": "To allow HTTP (port\u202f80) and HTTPS (port\u202f443) through the NixOS firewall, add the ports to `networking.firewall.allowedTCPPorts` in your configuration (the firewall is enabled by default, so you only need to open the ports you want):\n\n```nix\n{\n  # The firewall is enabled by default; no need to set it to true.\n  networking.firewall.allowedTCPPorts = [\n    80   # HTTP\n    443  # HTTPS\n  ];\n}\n```\n\nThis will open the two TCP ports to the outside world while keeping the rest of the firewall rules in place.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly gives networking.firewall.allowedTCPPorts = [ 80 443 ] and notes the firewall is enabled by default, all of which is supported by passage [1]."
+        },
+        {
+          "id": "firewall-disable",
+          "ms": 1570,
+          "steps": [
+            "retrieve: How do I turn off the firewall?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "To disable the NixOS firewall, set the `networking.firewall.enable` option to `false` in your configuration:\n\n```nix\n{\n  networking.firewall.enable = false;\n}\n```\n\nThis turns off the stateful firewall that is enabled by default.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly states setting networking.firewall.enable = false, matching the reference and supported by the passage."
+        },
+        {
+          "id": "firewall-range",
+          "ms": 1609,
+          "steps": [
+            "retrieve: How do I open a range of TCP ports like 4000 to 4007?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "To open a contiguous range of TCP ports you use the **`networking.firewall.allowedTCPPortRanges`** option and specify the start (`from`) and end (`to`) of the range:\n\n```nix\n{\n  networking.firewall.allowedTCPPortRanges = [\n    {\n      from = 4000;\n      to   = 4007;\n    }\n  ];\n}\n```\n\nThis adds ports\u202f4000\u202fthrough\u202f4007 to the firewall\u2019s allowed list.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly uses networking.firewall.allowedTCPPortRanges with from=4000 and to=4007, matching the reference and the passage exactly."
+        },
+        {
+          "id": "rollback",
+          "ms": 2155,
+          "steps": [
+            "retrieve: My last nixos-rebuild broke things. How do I undo it?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "If the most recent `nixos-rebuild` left your system in a broken state you can roll back to the previous configuration.\n\n**From a running system**\n\n```bash\n# nixos-rebuild switch --rollback\n```\n\nThis command switches the system to the last successful configuration. It is equivalent to:\n\n```bash\n# /nix/var/nix/profiles/system-N-link/bin/switch-to-configuration switch\n```\n\n**From the boot loader**\n\n1. Reboot and, in the GRUB menu, choose **\u201cNixOS - All configurations\u201d** \u2192 select a configuration that predates the broken one (any entry that hasn\u2019t been garbage\u2011collected).  \n2. After the system boots, make that configuration the default for future boots:\n\n```bash\n# /run/current-system/bin/switch-to-configuration boot\n```\n\nThese are the standard ways to undo a problematic `nixos-rebuild`\u202f[1].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer matches the reference exactly: it gives `nixos-rebuild switch --rollback` for a running system, the GRUB \"NixOS - All configurations\" submenu for booting an older config, and `/run/current-system/bin/switch-to-configuration boot` to make it default, all of which are supported by the passage."
+        },
+        {
+          "id": "apply-config",
+          "ms": 2116,
+          "steps": [
+            "retrieve: I edited /etc/nixos/configuration.nix. How do I apply the change?",
+            "grade: kept 2/6",
+            "generate"
+          ],
+          "answer": "When you modify **/etc/nixos/configuration.nix** you need to rebuild the system configuration and make it active.  \nDo this as root (or with\u202f`sudo`):\n\n```bash\n# nixos-rebuild switch\n```\n\n`nixos-rebuild switch` builds the new configuration, installs it as the default for the next boot, and reloads the relevant system services so the changes take effect immediately\u202f[1].\n\nIf you only want to try the new configuration without making it the boot default, you can use:\n\n```bash\n# nixos-rebuild test\n```\n\nor build it for the next reboot only:\n\n```bash\n# nixos-rebuild boot\n```\n\n(These alternatives are also described in the manual\u202f[1][2].)",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly states to run nixos-rebuild switch as root, which builds the new configuration, makes it the boot default, and activates it in the running system, matching the reference and passages; the extra test/boot alternatives are also supported by the passages."
+        },
+        {
+          "id": "test-config",
+          "ms": 3234,
+          "steps": [
+            "retrieve: How can I try a new configuration without making it the boot default?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "You can build the new configuration and switch the running system to it without changing the default boot entry by using the **test** command:\n\n```bash\n# nixos-rebuild test\n```\n\nThis builds the configuration and applies it to the current session, but it does **not** make the new configuration the default for the next boot, so a reboot will return to the previous working configuration.\u202f[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly identifies nixos-rebuild test as the command that switches the running system without making it the boot default, matching the reference and supported by passage [1]."
+        },
+        {
+          "id": "add-user",
+          "ms": 3044,
+          "steps": [
+            "retrieve: How do I create a normal user account who can use sudo?",
+            "grade: kept 2/6",
+            "generate"
+          ],
+          "answer": "Create the user declaratively in **configuration.nix** and add it to the **wheel** group (the group that grants sudo rights).\n\n```nix\n# /etc/nixos/configuration.nix\n{\n  users.users.alice = {\n    isNormalUser = true;          # ordinary (non\u2011system) account\n    description   = \"Alice\";\n    extraGroups   = [ \"wheel\" \"networkmanager\" ];   # wheel \u2192 sudo, networkmanager \u2192 network control\n    # optional: give the user a password (otherwise login requires a key)\n    # hashedPassword = \"<result of mkpasswd \u2026>\";\n  };\n}\n```\n\n* The `extraGroups = [ \"wheel\" \u2026 ]` line makes the user a member of the **wheel** group, which \u201callows her to use sudo to execute commands as root\u201d\u202f[1].\n* Users created this way have no password by default; you can set one later with `passwd` or by providing a `hashedPassword`\u202f[1].\n\nAfter adding the snippet, apply it with:\n\n```sh\nsudo nixos-rebuild switch\n```\n\nThe user **alice** will now exist, belong to the wheel group, and be able to run commands with `sudo`.",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly gives users.users.<name> with isNormalUser = true and extraGroups = [ \"wheel\" ], matching the reference, and all supporting claims (wheel grants sudo, no default password, passwd/hashedPassword/mkpasswd, nixos-rebuild switch) are supported by the passages."
+        },
+        {
+          "id": "install-pkg",
+          "ms": 1981,
+          "steps": [
+            "retrieve: How do I install a package like Thunderbird system-wide declaratively?",
+            "grade: kept 3/6",
+            "generate"
+          ],
+          "answer": "To install a package such as **Thunderbird** for the whole system you add it to the `environment.systemPackages` list in your `configuration.nix` and then rebuild the system.\n\n```nix\n# /etc/nixos/configuration.nix\n{\n  environment.systemPackages = [ pkgs.thunderbird ];\n}\n```\n\nAfter saving the file run:\n\n```bash\n$ sudo nixos-rebuild switch\n```\n\nDuring the rebuild Nix will build or download the Thunderbird package from the Nixpkgs collection and make it available system\u2011wide\u202f[1][3].  \n\nIf you later want to remove the package, simply delete it from the list and run `nixos-rebuild switch` again\u202f[2].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly states adding pkgs.thunderbird to environment.systemPackages and running nixos-rebuild switch, matching the reference and supported by the passages."
+        },
+        {
+          "id": "nix-env",
+          "ms": 3443,
+          "steps": [
+            "retrieve: How do I install a package from the command line without editing my configuration?",
+            "grade: kept 2/6",
+            "generate"
+          ],
+          "answer": "You can install a package directly from the command line with the **`nix-env`** tool, which does not require any changes to *configuration.nix*.\n\n```bash\n# Install a package by its attribute name (recommended)\nnix-env -iA nixos.thunderbird\n```\n\n* `-iA` tells `nix-env` to install the package identified by its attribute name (`nixos.thunderbird` in this example).  \n* If you run the command as **root**, the package is placed in the system\u2011wide profile `/nix/var/nix/profiles/default` and becomes visible to all users.  \n* If you run it as a normal user, the package is installed in your personal profile `/nix/var/nix/profiles/per-user/<your\u2011username>/profile` and is only visible to you.\n\nYou can also install by matching the package name (e.g., `nix-env -i thunderbird`), but this is slower and can be ambiguous if multiple packages share the same name. Packages are taken from the current NixOS channel, which you can update with `nix-channel --update nixos` before installing if you want the latest versions.  \n\nSource: [1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer matches the reference on nix-env -iA nixos.thunderbird, root vs user profiles, and the -A vs name-matching behavior, and all claims are supported by the passages."
+        },
+        {
+          "id": "auto-upgrade",
+          "ms": 2124,
+          "steps": [
+            "retrieve: Can NixOS update itself automatically?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "Yes. NixOS can upgrade itself automatically by enabling the built\u2011in auto\u2011upgrade service. Add the following to your `configuration.nix`:\n\n```nix\n{\n  system.autoUpgrade.enable = true;\n  system.autoUpgrade.allowReboot = true;   # optional \u2013 reboots when a new kernel is installed\n  # optional \u2013 specify a channel explicitly\n  # system.autoUpgrade.channel = \"https://channels.nixos.org/nixos-26.05\";\n}\n```\n\nThis creates the `nixos-upgrade.service` timer, which periodically runs `nixos-rebuild switch --upgrade` (or reboots automatically if `allowReboot` is true) to keep the system up\u2011to\u2011date\u202f[1].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer matches the reference and passage: correct options (system.autoUpgrade.enable, allowReboot, channel), the nixos-upgrade.service, and the nixos-rebuild switch --upgrade behavior, all supported by the passage."
+        },
+        {
+          "id": "channels",
+          "ms": 2454,
+          "steps": [
+            "retrieve: What is the difference between the stable and unstable NixOS channels?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "The stable channels (e.g.,\u202f`nixos-26.05`) only receive **conservative bug\u2011fixes and modest package upgrades**.  Updates will move a component such as the Linux kernel from one patch level to the next (e.g.,\u202f4.19.34 \u2192\u202f4.19.38) but will not introduce major version jumps that could break the system.  Stable channels are kept around until the next stable branch appears.\n\nThe **unstable** channel (`nixos-unstable`) tracks NixOS\u2019s **main development branch**.  It can contain **radical changes** between updates and is therefore not recommended for production use.  \n\nThus, the key difference is that stable channels provide safe, incremental updates, while the unstable channel provides the latest, potentially breaking changes.  \n\nSource: [1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer matches the reference and passage: stable channels (e.g., nixos-26.05) get conservative bug fixes and package upgrades, maintained until the next stable branch, while nixos-unstable tracks the main development branch with potentially radical changes."
+        },
+        {
+          "id": "disk-space",
+          "ms": 2881,
+          "steps": [
+            "retrieve: The Nix store is eating my disk. How do I free up space?",
+            "grade: kept 2/6",
+            "generate"
+          ],
+          "answer": "The Nix store grows because every new package version is written to a new path under **/nix/store** and old paths are kept as long as something still references them.  \nTo reclaim the space you have three main actions:\n\n1. **Run the garbage collector** \u2013 it removes all store paths that are no longer referenced by any GC root (profiles, system generations, etc.).  \n\n   ```bash\n   $ nix-collect-garbage          # normal GC, keeps old system roots\n   $ nix-collect-garbage -d       # also deletes old roots, removing rollback ability\n   ```  \n   [2]\n\n2. **Enable automatic GC** so the cleanup happens regularly without manual intervention. Add the following to your `configuration.nix` and rebuild:\n\n   ```nix\n   {\n     nix.gc.automatic = true;\n     nix.gc.dates = \"03:15\";   # run every night at 03:15\n   }\n   ```  \n   [2]\n\n   You can also start the one\u2011shot systemd unit manually:\n\n   ```bash\n   # systemctl start nix-gc.service\n   ```  \n   [2]\n\n3. **Deduplicate identical files** in the store, which can recover up to ~40\u202f% of the store size. Run the store optimiser after the GC:\n\n   ```bash\n   $ nix-store --optimise\n   ```  \n   [1]\n\n4. **Delete old generations of user profiles** if you keep many of them:\n\n   ```bash\n   $ nix-env -p /nix/var/nix/profiles/per-user/$USER/profile --delete-generations old\n   ```  \n   [1][2]\n\nBy regularly running the garbage collector (manually or via the automatic unit) and then running `nix-store --optimise`, you will free up the space taken by unreferenced and duplicated store paths.",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer covers all key points from the reference (nix-collect-garbage, -d flag, nix.gc.automatic, nix-store --optimise) and every claim is supported by the provided passages."
+        },
+        {
+          "id": "gc-schedule",
+          "ms": 1942,
+          "steps": [
+            "retrieve: How do I make garbage collection run every night?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "To have Nix\u2019s garbage collector run automatically each night, enable the built\u2011in systemd timer and set the time you want it to run in your `configuration.nix`:\n\n```nix\n{\n  nix.gc.automatic = true;   # enable the nightly GC service\n  nix.gc.dates = \"03:15\";     # run it each night at 03:15\n}\n```\n\nAfter rebuilding the system (`nixos-rebuild switch`), the `nix-gc.service` timer will invoke `nix-collect-garbage` every night at the specified time.  \n\n[1]",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": false,
+          "reason": "The answer correctly gives nix.gc.automatic = true and nix.gc.dates = \"03:15\" matching the reference, but it claims a \"systemd timer\" and that \"nix-gc.service timer will invoke nix-collect-garbage,\" which the passage does not state (it only mentions a systemd unit and running it at certain times), making it unfaithful."
+        },
+        {
+          "id": "wifi",
+          "ms": 3552,
+          "steps": [
+            "retrieve: How do I set up wifi without NetworkManager?",
+            "grade: kept 2/6",
+            "generate"
+          ],
+          "answer": "To use Wi\u2011Fi without NetworkManager you let **wpa_supplicant** manage the interface directly.\n\n```nix\n{\n  # Enable the wpa_supplicant service\n  networking.wireless.enable = true;\n\n  # (optional) Choose the interface name(s) that should be handled.\n  # This makes the service more reliable and creates a separate\n  # systemd unit for each interface.\n  networking.wireless.interfaces = [ \"wlan0\" ];   # or [\"wlan0\" \"wlan1\"]\n}\n```\n\n* `networking.wireless.enable = true` turns on wpa_supplicant, which will\n  manage the first wireless interface that appears\u202f\u2014\u202for the ones listed in\n  `networking.wireless.interfaces` if you set them\u202f[1].\n\n* When you specify interfaces, NixOS creates individual systemd services\n  such as `wpa_supplicant-wlan0.service` (and `wpa_supplicant-wlan1.service`\n  for additional interfaces)\u202f[1].\n\nIf you want to add or change networks without rebuilding the NixOS\nconfiguration, you can allow users in the `wpa_supplicant` group to use\nimperative commands:\n\n```nix\n{\n  networking.wireless.userControlled = true;   # permits wpa_cli usage\n}\n```\n\nThen, as a user in the `wpa_supplicant` group, you can run `wpa_cli` to add\na network:\n\n```sh\n# wpa_cli\n> add_network\n> set_network 0 ssid \"mySSID\"\n> set_network 0 psk \"myPassword\"\n> select_network 0\n```\n\nThese changes are temporary; to make them persistent you can enable\n`networking.wireless.allowAuxiliaryImperativeNetworks` and use `wpa_cli\nsave` or edit `/etc/wpa_supplicant/imperative.conf`, then restart the\nservice\u202f[2].",
+          "cited_hit": true,
+          "correctness": 5,
+          "faithful": true,
+          "reason": "The answer correctly identifies wpa_supplicant with networking.wireless.enable = true and recommends networking.wireless.interfaces, matching the reference, and all additional details (systemd units, userControlled, wpa_cli, allowAuxiliaryImperativeNetworks, imperative.conf, restart) are supported by the passages."
+        },
+        {
+          "id": "x11",
+          "ms": 1782,
+          "steps": [
+            "retrieve: How do I enable a graphical desktop like GNOME?",
+            "grade: kept 1/6",
+            "generate"
+          ],
+          "answer": "To enable the GNOME graphical desktop on NixOS, add the following settings to your `configuration.nix`:\n\n```nix\n{\n  services.desktopManager.gnome.enable = true;\n  services.displayManager.gdm.enable = true;\n}\n```\n\nThis activates the full GNOME desktop environment and the GDM display manager (recommended for full GNOME functionality such as screen locking)\u30101\u3011. After updating the configuration, run `sudo nixos-rebuild switch` (or `nixos-rebuild boot`) to apply the changes.",
+          "cited_hit": true,
+          "correctness": 4,
+          "faithful": true,
+          "reason": "The answer correctly gives services.desktopManager.gnome.enable = true and recommends GDM, matching the passage, but it omits the reference's key fact about enabling the X server (services.xserver.enable = true)."
+        },
+        {
+          "id": "oos-windows",
+          "ms": 2625,
+          "steps": [
+            "retrieve: How do I activate a Windows 11 license key?",
+            "grade: kept 0/6",
+            "rewrite: programs.wine license key activation",
+            "retrieve: programs.wine license key activation",
+            "grade: kept 0/6",
+            "generate: no context"
+          ],
+          "answer": "I couldn't find this in the NixOS manual.",
+          "refused": true
+        },
+        {
+          "id": "oos-football",
+          "ms": 2854,
+          "steps": [
+            "retrieve: Who won the 2018 FIFA World Cup?",
+            "grade: kept 0/6",
+            "rewrite: services.fifa.enable",
+            "retrieve: services.fifa.enable",
+            "grade: kept 0/6",
+            "generate: no context"
+          ],
+          "answer": "I couldn't find this in the NixOS manual.",
+          "refused": true
+        },
+        {
+          "id": "oos-macos",
+          "ms": 10715,
+          "steps": [
+            "retrieve: How do I change the Dock size on macOS?",
+            "grade: kept 0/6",
+            "rewrite: services.dock.enable",
+            "retrieve: services.dock.enable",
+            "grade: kept 0/6",
+            "generate: no context"
+          ],
+          "answer": "I couldn't find this in the NixOS manual.",
+          "refused": true
+        }
+      ]
+    }
+  }
+}

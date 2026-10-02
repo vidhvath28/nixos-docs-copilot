@@ -23,7 +23,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 
 from app.config import get_settings
-from app.graph import NOT_FOUND, build_graph, chroma_search, format_passages
+from app.graph import build_graph, chroma_search, format_passages, is_not_found
 from app.llm import get_vectorstore, make_chat_model
 
 HERE = Path(__file__).parent
@@ -84,7 +84,7 @@ def retrieval_eval(items: list[dict], k: int) -> dict:
     return {"k": k, "hit_rate": sum(r["hit"] for r in rows) / len(rows), "n": len(rows), "rows": rows}
 
 
-def full_eval(items: list[dict]) -> dict:
+def full_eval(items: list[dict], pause: float = 0.0) -> dict:
     s = get_settings()
     search = chroma_search(get_vectorstore())
     llm = make_chat_model()
@@ -94,6 +94,7 @@ def full_eval(items: list[dict]) -> dict:
         graph = build_graph(llm, search, top_k=s.top_k, max_rewrites=s.max_rewrites, mode=mode)
         rows = []
         for it in items:
+            time.sleep(pause)  # stay under free-tier tokens/minute so latency isn't mostly throttling
             t0 = time.perf_counter()
             out = with_retry(graph.invoke, {"question": it["question"]})
             row = {
@@ -102,7 +103,7 @@ def full_eval(items: list[dict]) -> dict:
                 "steps": out["steps"],
                 "answer": out["answer"],
             }
-            refused = out["answer"].strip().strip('"') == NOT_FOUND
+            refused = is_not_found(out["answer"])
             if it["reference"] is None:
                 row["refused"] = refused
             else:
@@ -158,6 +159,7 @@ def summary_table(retrieval: dict, full: dict | None) -> str:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--retrieval-only", action="store_true")
+    ap.add_argument("--pause", type=float, default=0.0, help="seconds to wait between questions")
     ap.add_argument("--k", type=int, default=get_settings().top_k)
     args = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
@@ -166,7 +168,7 @@ def main():
     s = get_settings()
     items = load_dataset()
     retrieval = retrieval_eval(items, args.k)
-    full = None if args.retrieval_only else full_eval(items)
+    full = None if args.retrieval_only else full_eval(items, args.pause)
 
     stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     out_dir = HERE / "results"

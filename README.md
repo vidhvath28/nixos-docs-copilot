@@ -95,7 +95,9 @@ pytest -q && ruff check .
 
 ## Deploy
 
-The `Dockerfile` builds the index into the image, so the container starts ready to serve. It listens
+The `Dockerfile` builds the index into the image, so the container starts ready to serve
+(about 360 MB RSS, which fits a 512 MB free instance). `render.yaml` is a Render blueprint: New → Blueprint →
+pick this repo → enter `GROQ_API_KEY`. It listens
 on `$PORT` (default 7860) and needs `GROQ_API_KEY` (or `LLM_PROVIDER=openai` + `OPENAI_API_KEY`) as a secret.
 
 ## Stack

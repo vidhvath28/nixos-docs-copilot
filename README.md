@@ -16,7 +16,7 @@ A retrieval-augmented assistant for the [NixOS manual](https://nixos.org/manual/
 Ask a NixOS question in plain English. The answer comes only from the manual, with a deep link to every
 section it cites, and the assistant says so when the manual doesn't cover the question.
 
-**Live demo:** _coming soon_
+**Live demo:** [huggingface.co/spaces/Vidhvath/Nixos](https://huggingface.co/spaces/Vidhvath/Nixos)
 
 ## How it works
 
